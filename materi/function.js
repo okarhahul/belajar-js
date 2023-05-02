@@ -1,7 +1,5 @@
 // terdapat dua cara mendefinisikan function
 
-
-
 // pertama dengan membuat keywordnya secara langsung
 // function duaBilangan(a,b) {
 //     var total
