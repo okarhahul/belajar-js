@@ -96,9 +96,16 @@ const Penduduk = function () {
         console.log(`Hello, saya ${this.nama} dan umur saya ${this.umur}`);
     }
 
-    setInterval(function(){
+    // setInterval(function(){
+    //     console.log(this.umur++)
+    // },500)
+    // outputnya Nan, Nan, Nan, ..., Nan++
+    // karena this disini mengacu pada global scope dengan memiliki nilai window
+    // maka dari itu kita bisa menggunakan arrow function, karena pada arrow function tidak memliki konsep this maka dia akan mencari pada elexical scopenya
+
+    setInterval(() => {
         console.log(this.umur++)
-    },500)
+    }, 500)
+    // output 22, 23, 24, 25, ...., n
 };
 const oka = new Penduduk();
-oka.perkenalan();
